@@ -1,0 +1,102 @@
+\section{I\-Marker Class Reference}
+\label{class_i_marker}\index{I\-Marker@{I\-Marker}}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum {\bfseries Dof} \{ {\bfseries B\-O\-T\-H}, 
+{\bfseries P\-O\-S}, 
+{\bfseries O\-R\-I\-E\-N\-T}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf I\-Marker} (interactive\-\_\-markers\-::\-Interactive\-Marker\-Server \&server, const std\-::string \&name, const std\-::string \&frame\-\_\-id=\char`\"{}/base\-\_\-footprint\char`\"{}, boost\-::function$<$ void(const visualization\-\_\-msgs\-::\-Interactive\-Marker\-Feedback\-Const\-Ptr \&)$>$ callback={\bf print\-Feedback}, Dof dof=B\-O\-T\-H)
+\item 
+{\bf I\-Marker} (interactive\-\_\-markers\-::\-Interactive\-Marker\-Server \&server, const std\-::string \&name, const Eigen\-::\-Affine3d \&pose, const std\-::string \&frame\-\_\-id=\char`\"{}/base\-\_\-footprint\char`\"{}, boost\-::function$<$ void(const visualization\-\_\-msgs\-::\-Interactive\-Marker\-Feedback\-Const\-Ptr \&)$>$ callback={\bf print\-Feedback}, Dof dof=B\-O\-T\-H)
+\item 
+{\bf I\-Marker} (interactive\-\_\-markers\-::\-Interactive\-Marker\-Server \&server, const std\-::string \&name, const Eigen\-::\-Vector3d \&position, const Eigen\-::\-Quaterniond \&orientation, const std\-::string \&frame\-\_\-id=\char`\"{}/base\-\_\-footprint\char`\"{}, boost\-::function$<$ void(const visualization\-\_\-msgs\-::\-Interactive\-Marker\-Feedback\-Const\-Ptr \&)$>$ callback={\bf print\-Feedback}, Dof dof=B\-O\-T\-H)
+\item 
+{\bf I\-Marker} (interactive\-\_\-markers\-::\-Interactive\-Marker\-Server \&server, const std\-::string \&name, const Eigen\-::\-Vector3d \&position, const std\-::string \&frame\-\_\-id=\char`\"{}/base\-\_\-footprint\char`\"{}, boost\-::function$<$ void(const visualization\-\_\-msgs\-::\-Interactive\-Marker\-Feedback\-Const\-Ptr \&)$>$ callback={\bf print\-Feedback}, Dof dof=B\-O\-T\-H)
+\item 
+void {\bf move} (const Eigen\-::\-Affine3d \&pose)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void {\bf print\-Feedback} (const visualization\-\_\-msgs\-::\-Interactive\-Marker\-Feedback\-Const\-Ptr \&)
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{I\-Marker@{I\-Marker}!I\-Marker@{I\-Marker}}
+\index{I\-Marker@{I\-Marker}!IMarker@{I\-Marker}}
+\subsubsection[{I\-Marker}]{\setlength{\rightskip}{0pt plus 5cm}I\-Marker\-::\-I\-Marker (
+\begin{DoxyParamCaption}
+\item[{interactive\-\_\-markers\-::\-Interactive\-Marker\-Server \&}]{server, }
+\item[{const std\-::string \&}]{name, }
+\item[{const std\-::string \&}]{frame\-\_\-id = {\ttfamily \char`\"{}/base\-\_\-footprint\char`\"{}}, }
+\item[{boost\-::function$<$ void(const visualization\-\_\-msgs\-::\-Interactive\-Marker\-Feedback\-Const\-Ptr \&)$>$}]{callback = {\ttfamily {\bf print\-Feedback}}, }
+\item[{Dof}]{dof = {\ttfamily BOTH}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_i_marker_a0fa2f0bfd8a218542647d83eb5aa65b8}
+create an interactive marker at the origin \index{I\-Marker@{I\-Marker}!I\-Marker@{I\-Marker}}
+\index{I\-Marker@{I\-Marker}!IMarker@{I\-Marker}}
+\subsubsection[{I\-Marker}]{\setlength{\rightskip}{0pt plus 5cm}I\-Marker\-::\-I\-Marker (
+\begin{DoxyParamCaption}
+\item[{interactive\-\_\-markers\-::\-Interactive\-Marker\-Server \&}]{server, }
+\item[{const std\-::string \&}]{name, }
+\item[{const Eigen\-::\-Affine3d \&}]{pose, }
+\item[{const std\-::string \&}]{frame\-\_\-id = {\ttfamily \char`\"{}/base\-\_\-footprint\char`\"{}}, }
+\item[{boost\-::function$<$ void(const visualization\-\_\-msgs\-::\-Interactive\-Marker\-Feedback\-Const\-Ptr \&)$>$}]{callback = {\ttfamily {\bf print\-Feedback}}, }
+\item[{Dof}]{dof = {\ttfamily BOTH}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_i_marker_afaf8a827d30d4d5fdf9b4bd44288e908}
+create an interactive marker with an initial pose \index{I\-Marker@{I\-Marker}!I\-Marker@{I\-Marker}}
+\index{I\-Marker@{I\-Marker}!IMarker@{I\-Marker}}
+\subsubsection[{I\-Marker}]{\setlength{\rightskip}{0pt plus 5cm}I\-Marker\-::\-I\-Marker (
+\begin{DoxyParamCaption}
+\item[{interactive\-\_\-markers\-::\-Interactive\-Marker\-Server \&}]{server, }
+\item[{const std\-::string \&}]{name, }
+\item[{const Eigen\-::\-Vector3d \&}]{position, }
+\item[{const Eigen\-::\-Quaterniond \&}]{orientation, }
+\item[{const std\-::string \&}]{frame\-\_\-id = {\ttfamily \char`\"{}/base\-\_\-footprint\char`\"{}}, }
+\item[{boost\-::function$<$ void(const visualization\-\_\-msgs\-::\-Interactive\-Marker\-Feedback\-Const\-Ptr \&)$>$}]{callback = {\ttfamily {\bf print\-Feedback}}, }
+\item[{Dof}]{dof = {\ttfamily BOTH}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_i_marker_a0a7ea32a2f0818b7fa1009af26aac165}
+create an interactive marker with an initial pose \index{I\-Marker@{I\-Marker}!I\-Marker@{I\-Marker}}
+\index{I\-Marker@{I\-Marker}!IMarker@{I\-Marker}}
+\subsubsection[{I\-Marker}]{\setlength{\rightskip}{0pt plus 5cm}I\-Marker\-::\-I\-Marker (
+\begin{DoxyParamCaption}
+\item[{interactive\-\_\-markers\-::\-Interactive\-Marker\-Server \&}]{server, }
+\item[{const std\-::string \&}]{name, }
+\item[{const Eigen\-::\-Vector3d \&}]{position, }
+\item[{const std\-::string \&}]{frame\-\_\-id = {\ttfamily \char`\"{}/base\-\_\-footprint\char`\"{}}, }
+\item[{boost\-::function$<$ void(const visualization\-\_\-msgs\-::\-Interactive\-Marker\-Feedback\-Const\-Ptr \&)$>$}]{callback = {\ttfamily {\bf print\-Feedback}}, }
+\item[{Dof}]{dof = {\ttfamily BOTH}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_i_marker_accd547c9b5616019f944474f0146e63e}
+create an interactive marker with an initial position 
+
+\subsection{Member Function Documentation}
+\index{I\-Marker@{I\-Marker}!move@{move}}
+\index{move@{move}!IMarker@{I\-Marker}}
+\subsubsection[{move}]{\setlength{\rightskip}{0pt plus 5cm}void I\-Marker\-::move (
+\begin{DoxyParamCaption}
+\item[{const Eigen\-::\-Affine3d \&}]{pose}
+\end{DoxyParamCaption}
+)}\label{class_i_marker_a5496375f28fce4f9cd14577a7c837115}
+move marker to new pose \index{I\-Marker@{I\-Marker}!print\-Feedback@{print\-Feedback}}
+\index{print\-Feedback@{print\-Feedback}!IMarker@{I\-Marker}}
+\subsubsection[{print\-Feedback}]{\setlength{\rightskip}{0pt plus 5cm}void I\-Marker\-::print\-Feedback (
+\begin{DoxyParamCaption}
+\item[{const visualization\-\_\-msgs\-::\-Interactive\-Marker\-Feedback\-Const\-Ptr \&}]{feedback}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_i_marker_a2b474fdd2a43068d74b169804edb1c75}
+default callback which just prints new position and orientation 
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+doc/pr2\-\_\-tutorials/interactivity/src/imarker.\-h\item 
+doc/pr2\-\_\-tutorials/interactivity/src/imarker.\-cpp\end{DoxyCompactItemize}

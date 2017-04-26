@@ -1,0 +1,35 @@
+\section{T\-R\-A\-C\-\_\-\-I\-K\-:\-:T\-R\-A\-C\-\_\-\-I\-K Class Reference}
+\label{class_t_r_a_c___i_k_1_1_t_r_a_c___i_k}\index{T\-R\-A\-C\-\_\-\-I\-K\-::\-T\-R\-A\-C\-\_\-\-I\-K@{T\-R\-A\-C\-\_\-\-I\-K\-::\-T\-R\-A\-C\-\_\-\-I\-K}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries T\-R\-A\-C\-\_\-\-I\-K} (const K\-D\-L\-::\-Chain \&\-\_\-chain, const K\-D\-L\-::\-Jnt\-Array \&\-\_\-q\-\_\-min, const K\-D\-L\-::\-Jnt\-Array \&\-\_\-q\-\_\-max, double \-\_\-maxtime=0.\-005, double \-\_\-eps=1e-\/5, Solve\-Type \-\_\-type=\-Speed)\label{class_t_r_a_c___i_k_1_1_t_r_a_c___i_k_a65aa7452b9056ef45cdc1b4180620823}
+
+\item 
+{\bfseries T\-R\-A\-C\-\_\-\-I\-K} (const std\-::string \&base\-\_\-link, const std\-::string \&tip\-\_\-link, const std\-::string \&U\-R\-D\-F\-\_\-param=\char`\"{}/robot\-\_\-description\char`\"{}, double \-\_\-maxtime=0.\-005, double \-\_\-eps=1e-\/5, Solve\-Type \-\_\-type=\-Speed)\label{class_t_r_a_c___i_k_1_1_t_r_a_c___i_k_a18ca0ea66603bc72118cbef14969cca1}
+
+\item 
+bool {\bfseries get\-K\-D\-L\-Chain} (K\-D\-L\-::\-Chain \&chain\-\_\-)\label{class_t_r_a_c___i_k_1_1_t_r_a_c___i_k_acf36ae6b9773eed5992648f6d5912599}
+
+\item 
+bool {\bfseries get\-K\-D\-L\-Limits} (K\-D\-L\-::\-Jnt\-Array \&lb\-\_\-, K\-D\-L\-::\-Jnt\-Array \&ub\-\_\-)\label{class_t_r_a_c___i_k_1_1_t_r_a_c___i_k_afc911c3ec0270fa2420c208cb5aee2b5}
+
+\item 
+int {\bfseries Cart\-To\-Jnt} (const K\-D\-L\-::\-Jnt\-Array \&q\-\_\-init, const K\-D\-L\-::\-Frame \&p\-\_\-in, K\-D\-L\-::\-Jnt\-Array \&q\-\_\-out, const K\-D\-L\-::\-Twist \&bounds=K\-D\-L\-::\-Twist\-::\-Zero())\label{class_t_r_a_c___i_k_1_1_t_r_a_c___i_k_af093d155f2d79105c6ec62c02cf47e1a}
+
+\item 
+void {\bfseries Set\-Solve\-Type} (Solve\-Type \-\_\-type)\label{class_t_r_a_c___i_k_1_1_t_r_a_c___i_k_a32120c7560aadc3171dc290a640737fa}
+
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static double {\bfseries Joint\-Err} (const K\-D\-L\-::\-Jnt\-Array \&arr1, const K\-D\-L\-::\-Jnt\-Array \&arr2)\label{class_t_r_a_c___i_k_1_1_t_r_a_c___i_k_a13c5d0206917db768becab25c33f44af}
+
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+include/trac\-\_\-ik/trac\-\_\-ik.\-hpp\item 
+src/trac\-\_\-ik.\-cpp\end{DoxyCompactItemize}

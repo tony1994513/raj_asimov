@@ -1,0 +1,1 @@
+rosrun moveit_ikfast create_ikfast_moveit_plugin.py cool400_description arm cool400_ikfast_arm_plugin /home/raj/catkin_ws/src/cool400_ikfast_arm_plugin/src/cool400_description_arm_ikfast_solver.cpp

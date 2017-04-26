@@ -1,0 +1,253 @@
+\section{ikfast\-\_\-kinematics\-\_\-plugin\-:\-:I\-K\-Fast\-Kinematics\-Plugin Class Reference}
+\label{classikfast__kinematics__plugin_1_1_i_k_fast_kinematics_plugin}\index{ikfast\-\_\-kinematics\-\_\-plugin\-::\-I\-K\-Fast\-Kinematics\-Plugin@{ikfast\-\_\-kinematics\-\_\-plugin\-::\-I\-K\-Fast\-Kinematics\-Plugin}}
+
+
+Inherits Kinematics\-Base.
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool {\bf get\-Position\-I\-K} (const geometry\-\_\-msgs\-::\-Pose \&ik\-\_\-pose, const std\-::vector$<$ double $>$ \&ik\-\_\-seed\-\_\-state, std\-::vector$<$ double $>$ \&solution, moveit\-\_\-msgs\-::\-Move\-It\-Error\-Codes \&error\-\_\-code, const kinematics\-::\-Kinematics\-Query\-Options \&options=kinematics\-::\-Kinematics\-Query\-Options()) const 
+\begin{DoxyCompactList}\small\item\em Given a desired pose of the end-\/effector, compute the joint angles to reach it. \end{DoxyCompactList}\item 
+bool {\bf get\-Position\-I\-K} (const std\-::vector$<$ geometry\-\_\-msgs\-::\-Pose $>$ \&ik\-\_\-poses, const std\-::vector$<$ double $>$ \&ik\-\_\-seed\-\_\-state, std\-::vector$<$ std\-::vector$<$ double $>$ $>$ \&solutions, kinematics\-::\-Kinematics\-Result \&result, const kinematics\-::\-Kinematics\-Query\-Options \&options) const 
+\begin{DoxyCompactList}\small\item\em Given a desired pose of the end-\/effector, compute the set joint angles solutions that are able to reach it. \end{DoxyCompactList}\item 
+bool {\bf search\-Position\-I\-K} (const geometry\-\_\-msgs\-::\-Pose \&ik\-\_\-pose, const std\-::vector$<$ double $>$ \&ik\-\_\-seed\-\_\-state, double timeout, std\-::vector$<$ double $>$ \&solution, moveit\-\_\-msgs\-::\-Move\-It\-Error\-Codes \&error\-\_\-code, const kinematics\-::\-Kinematics\-Query\-Options \&options=kinematics\-::\-Kinematics\-Query\-Options()) const 
+\begin{DoxyCompactList}\small\item\em Given a desired pose of the end-\/effector, search for the joint angles required to reach it. This particular method is intended for \char`\"{}searching\char`\"{} for a solutions by stepping through the redundancy (or other numerical routines). \end{DoxyCompactList}\item 
+bool {\bf search\-Position\-I\-K} (const geometry\-\_\-msgs\-::\-Pose \&ik\-\_\-pose, const std\-::vector$<$ double $>$ \&ik\-\_\-seed\-\_\-state, double timeout, const std\-::vector$<$ double $>$ \&consistency\-\_\-limits, std\-::vector$<$ double $>$ \&solution, moveit\-\_\-msgs\-::\-Move\-It\-Error\-Codes \&error\-\_\-code, const kinematics\-::\-Kinematics\-Query\-Options \&options=kinematics\-::\-Kinematics\-Query\-Options()) const 
+\begin{DoxyCompactList}\small\item\em Given a desired pose of the end-\/effector, search for the joint angles required to reach it. This particular method is intended for \char`\"{}searching\char`\"{} for a solutions by stepping through the redundancy (or other numerical routines). \end{DoxyCompactList}\item 
+bool {\bf search\-Position\-I\-K} (const geometry\-\_\-msgs\-::\-Pose \&ik\-\_\-pose, const std\-::vector$<$ double $>$ \&ik\-\_\-seed\-\_\-state, double timeout, std\-::vector$<$ double $>$ \&solution, const I\-K\-Callback\-Fn \&solution\-\_\-callback, moveit\-\_\-msgs\-::\-Move\-It\-Error\-Codes \&error\-\_\-code, const kinematics\-::\-Kinematics\-Query\-Options \&options=kinematics\-::\-Kinematics\-Query\-Options()) const 
+\begin{DoxyCompactList}\small\item\em Given a desired pose of the end-\/effector, search for the joint angles required to reach it. This particular method is intended for \char`\"{}searching\char`\"{} for a solutions by stepping through the redundancy (or other numerical routines). \end{DoxyCompactList}\item 
+bool {\bf search\-Position\-I\-K} (const geometry\-\_\-msgs\-::\-Pose \&ik\-\_\-pose, const std\-::vector$<$ double $>$ \&ik\-\_\-seed\-\_\-state, double timeout, const std\-::vector$<$ double $>$ \&consistency\-\_\-limits, std\-::vector$<$ double $>$ \&solution, const I\-K\-Callback\-Fn \&solution\-\_\-callback, moveit\-\_\-msgs\-::\-Move\-It\-Error\-Codes \&error\-\_\-code, const kinematics\-::\-Kinematics\-Query\-Options \&options=kinematics\-::\-Kinematics\-Query\-Options()) const 
+\begin{DoxyCompactList}\small\item\em Given a desired pose of the end-\/effector, search for the joint angles required to reach it. This particular method is intended for \char`\"{}searching\char`\"{} for a solutions by stepping through the redundancy (or other numerical routines). The consistency\-\_\-limit specifies that only certain redundancy positions around those specified in the seed state are admissible and need to be searched. \end{DoxyCompactList}\item 
+bool {\bf get\-Position\-F\-K} (const std\-::vector$<$ std\-::string $>$ \&link\-\_\-names, const std\-::vector$<$ double $>$ \&joint\-\_\-angles, std\-::vector$<$ geometry\-\_\-msgs\-::\-Pose $>$ \&poses) const 
+\begin{DoxyCompactList}\small\item\em Given a set of joint angles and a set of links, compute their pose. \end{DoxyCompactList}\item 
+void {\bf set\-Search\-Discretization} (const std\-::map$<$ int, double $>$ \&discretization)
+\begin{DoxyCompactList}\small\item\em Sets the discretization value for the redundant joint. \end{DoxyCompactList}\item 
+bool {\bf set\-Redundant\-Joints} (const std\-::vector$<$ unsigned int $>$ \&redundant\-\_\-joint\-\_\-indices)\label{classikfast__kinematics__plugin_1_1_i_k_fast_kinematics_plugin_a21ad0e4446318810521cae1bda0cb9ea}
+
+\begin{DoxyCompactList}\small\item\em Overrides the default method to prevent changing the redundant joints. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\index{ikfast\-\_\-kinematics\-\_\-plugin\-::\-I\-K\-Fast\-Kinematics\-Plugin@{ikfast\-\_\-kinematics\-\_\-plugin\-::\-I\-K\-Fast\-Kinematics\-Plugin}!get\-Position\-F\-K@{get\-Position\-F\-K}}
+\index{get\-Position\-F\-K@{get\-Position\-F\-K}!ikfast_kinematics_plugin::IKFastKinematicsPlugin@{ikfast\-\_\-kinematics\-\_\-plugin\-::\-I\-K\-Fast\-Kinematics\-Plugin}}
+\subsubsection[{get\-Position\-F\-K}]{\setlength{\rightskip}{0pt plus 5cm}bool ikfast\-\_\-kinematics\-\_\-plugin\-::\-I\-K\-Fast\-Kinematics\-Plugin\-::get\-Position\-F\-K (
+\begin{DoxyParamCaption}
+\item[{const std\-::vector$<$ std\-::string $>$ \&}]{link\-\_\-names, }
+\item[{const std\-::vector$<$ double $>$ \&}]{joint\-\_\-angles, }
+\item[{std\-::vector$<$ geometry\-\_\-msgs\-::\-Pose $>$ \&}]{poses}
+\end{DoxyParamCaption}
+) const}\label{classikfast__kinematics__plugin_1_1_i_k_fast_kinematics_plugin_aa6bee5da4ad5cd1505508ca8ade555a3}
+
+
+Given a set of joint angles and a set of links, compute their pose. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em link\-\_\-names} & A set of links for which F\-K needs to be computed \\
+\hline
+{\em joint\-\_\-angles} & The state for which F\-K is being computed \\
+\hline
+{\em poses} & The resultant set of poses (in the frame returned by get\-Base\-Frame()) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if a valid solution was found, false otherwise 
+\end{DoxyReturn}
+\index{ikfast\-\_\-kinematics\-\_\-plugin\-::\-I\-K\-Fast\-Kinematics\-Plugin@{ikfast\-\_\-kinematics\-\_\-plugin\-::\-I\-K\-Fast\-Kinematics\-Plugin}!get\-Position\-I\-K@{get\-Position\-I\-K}}
+\index{get\-Position\-I\-K@{get\-Position\-I\-K}!ikfast_kinematics_plugin::IKFastKinematicsPlugin@{ikfast\-\_\-kinematics\-\_\-plugin\-::\-I\-K\-Fast\-Kinematics\-Plugin}}
+\subsubsection[{get\-Position\-I\-K}]{\setlength{\rightskip}{0pt plus 5cm}bool ikfast\-\_\-kinematics\-\_\-plugin\-::\-I\-K\-Fast\-Kinematics\-Plugin\-::get\-Position\-I\-K (
+\begin{DoxyParamCaption}
+\item[{const geometry\-\_\-msgs\-::\-Pose \&}]{ik\-\_\-pose, }
+\item[{const std\-::vector$<$ double $>$ \&}]{ik\-\_\-seed\-\_\-state, }
+\item[{std\-::vector$<$ double $>$ \&}]{solution, }
+\item[{moveit\-\_\-msgs\-::\-Move\-It\-Error\-Codes \&}]{error\-\_\-code, }
+\item[{const kinematics\-::\-Kinematics\-Query\-Options \&}]{options = {\ttfamily kinematics\-:\-:KinematicsQueryOptions()}}
+\end{DoxyParamCaption}
+) const}\label{classikfast__kinematics__plugin_1_1_i_k_fast_kinematics_plugin_a0b9840d51351cc6f03b0ec6325c9fa53}
+
+
+Given a desired pose of the end-\/effector, compute the joint angles to reach it. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ik\-\_\-pose} & the desired pose of the link \\
+\hline
+{\em ik\-\_\-seed\-\_\-state} & an initial guess solution for the inverse kinematics \\
+\hline
+{\em solution} & the solution vector \\
+\hline
+{\em error\-\_\-code} & an error code that encodes the reason for failure or success \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if a valid solution was found, false otherwise 
+\end{DoxyReturn}
+\index{ikfast\-\_\-kinematics\-\_\-plugin\-::\-I\-K\-Fast\-Kinematics\-Plugin@{ikfast\-\_\-kinematics\-\_\-plugin\-::\-I\-K\-Fast\-Kinematics\-Plugin}!get\-Position\-I\-K@{get\-Position\-I\-K}}
+\index{get\-Position\-I\-K@{get\-Position\-I\-K}!ikfast_kinematics_plugin::IKFastKinematicsPlugin@{ikfast\-\_\-kinematics\-\_\-plugin\-::\-I\-K\-Fast\-Kinematics\-Plugin}}
+\subsubsection[{get\-Position\-I\-K}]{\setlength{\rightskip}{0pt plus 5cm}bool ikfast\-\_\-kinematics\-\_\-plugin\-::\-I\-K\-Fast\-Kinematics\-Plugin\-::get\-Position\-I\-K (
+\begin{DoxyParamCaption}
+\item[{const std\-::vector$<$ geometry\-\_\-msgs\-::\-Pose $>$ \&}]{ik\-\_\-poses, }
+\item[{const std\-::vector$<$ double $>$ \&}]{ik\-\_\-seed\-\_\-state, }
+\item[{std\-::vector$<$ std\-::vector$<$ double $>$ $>$ \&}]{solutions, }
+\item[{kinematics\-::\-Kinematics\-Result \&}]{result, }
+\item[{const kinematics\-::\-Kinematics\-Query\-Options \&}]{options}
+\end{DoxyParamCaption}
+) const}\label{classikfast__kinematics__plugin_1_1_i_k_fast_kinematics_plugin_af88491345c395fbb3451863667efdc3f}
+
+
+Given a desired pose of the end-\/effector, compute the set joint angles solutions that are able to reach it. 
+
+This is a default implementation that returns only one solution and so its result is equivalent to calling 'get\-Position\-I\-K(...)' with a zero initialized seed.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ik\-\_\-poses} & The desired pose of each tip link \\
+\hline
+{\em ik\-\_\-seed\-\_\-state} & an initial guess solution for the inverse kinematics \\
+\hline
+{\em solutions} & A vector of vectors where each entry is a valid joint solution \\
+\hline
+{\em result} & A struct that reports the results of the query \\
+\hline
+{\em options} & An option struct which contains the type of redundancy discretization used. This default implementation only supports the Kinmatic\-Searches\-::\-N\-O\-\_\-\-D\-I\-S\-C\-R\-E\-T\-I\-Z\-A\-T\-I\-O\-N method; requesting any other will result in failure. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if a valid set of solutions was found, false otherwise. 
+\end{DoxyReturn}
+\index{ikfast\-\_\-kinematics\-\_\-plugin\-::\-I\-K\-Fast\-Kinematics\-Plugin@{ikfast\-\_\-kinematics\-\_\-plugin\-::\-I\-K\-Fast\-Kinematics\-Plugin}!search\-Position\-I\-K@{search\-Position\-I\-K}}
+\index{search\-Position\-I\-K@{search\-Position\-I\-K}!ikfast_kinematics_plugin::IKFastKinematicsPlugin@{ikfast\-\_\-kinematics\-\_\-plugin\-::\-I\-K\-Fast\-Kinematics\-Plugin}}
+\subsubsection[{search\-Position\-I\-K}]{\setlength{\rightskip}{0pt plus 5cm}bool ikfast\-\_\-kinematics\-\_\-plugin\-::\-I\-K\-Fast\-Kinematics\-Plugin\-::search\-Position\-I\-K (
+\begin{DoxyParamCaption}
+\item[{const geometry\-\_\-msgs\-::\-Pose \&}]{ik\-\_\-pose, }
+\item[{const std\-::vector$<$ double $>$ \&}]{ik\-\_\-seed\-\_\-state, }
+\item[{double}]{timeout, }
+\item[{std\-::vector$<$ double $>$ \&}]{solution, }
+\item[{moveit\-\_\-msgs\-::\-Move\-It\-Error\-Codes \&}]{error\-\_\-code, }
+\item[{const kinematics\-::\-Kinematics\-Query\-Options \&}]{options = {\ttfamily kinematics\-:\-:KinematicsQueryOptions()}}
+\end{DoxyParamCaption}
+) const}\label{classikfast__kinematics__plugin_1_1_i_k_fast_kinematics_plugin_a783c63f4d9c31a43aa28c0774663d64b}
+
+
+Given a desired pose of the end-\/effector, search for the joint angles required to reach it. This particular method is intended for \char`\"{}searching\char`\"{} for a solutions by stepping through the redundancy (or other numerical routines). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ik\-\_\-pose} & the desired pose of the link \\
+\hline
+{\em ik\-\_\-seed\-\_\-state} & an initial guess solution for the inverse kinematics \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if a valid solution was found, false otherwise 
+\end{DoxyReturn}
+\index{ikfast\-\_\-kinematics\-\_\-plugin\-::\-I\-K\-Fast\-Kinematics\-Plugin@{ikfast\-\_\-kinematics\-\_\-plugin\-::\-I\-K\-Fast\-Kinematics\-Plugin}!search\-Position\-I\-K@{search\-Position\-I\-K}}
+\index{search\-Position\-I\-K@{search\-Position\-I\-K}!ikfast_kinematics_plugin::IKFastKinematicsPlugin@{ikfast\-\_\-kinematics\-\_\-plugin\-::\-I\-K\-Fast\-Kinematics\-Plugin}}
+\subsubsection[{search\-Position\-I\-K}]{\setlength{\rightskip}{0pt plus 5cm}bool ikfast\-\_\-kinematics\-\_\-plugin\-::\-I\-K\-Fast\-Kinematics\-Plugin\-::search\-Position\-I\-K (
+\begin{DoxyParamCaption}
+\item[{const geometry\-\_\-msgs\-::\-Pose \&}]{ik\-\_\-pose, }
+\item[{const std\-::vector$<$ double $>$ \&}]{ik\-\_\-seed\-\_\-state, }
+\item[{double}]{timeout, }
+\item[{const std\-::vector$<$ double $>$ \&}]{consistency\-\_\-limits, }
+\item[{std\-::vector$<$ double $>$ \&}]{solution, }
+\item[{moveit\-\_\-msgs\-::\-Move\-It\-Error\-Codes \&}]{error\-\_\-code, }
+\item[{const kinematics\-::\-Kinematics\-Query\-Options \&}]{options = {\ttfamily kinematics\-:\-:KinematicsQueryOptions()}}
+\end{DoxyParamCaption}
+) const}\label{classikfast__kinematics__plugin_1_1_i_k_fast_kinematics_plugin_abf29c302e50f2744ae406df5f1a5445e}
+
+
+Given a desired pose of the end-\/effector, search for the joint angles required to reach it. This particular method is intended for \char`\"{}searching\char`\"{} for a solutions by stepping through the redundancy (or other numerical routines). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ik\-\_\-pose} & the desired pose of the link \\
+\hline
+{\em ik\-\_\-seed\-\_\-state} & an initial guess solution for the inverse kinematics \\
+\hline
+{\em the} & distance that the redundancy can be from the current position \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if a valid solution was found, false otherwise 
+\end{DoxyReturn}
+\index{ikfast\-\_\-kinematics\-\_\-plugin\-::\-I\-K\-Fast\-Kinematics\-Plugin@{ikfast\-\_\-kinematics\-\_\-plugin\-::\-I\-K\-Fast\-Kinematics\-Plugin}!search\-Position\-I\-K@{search\-Position\-I\-K}}
+\index{search\-Position\-I\-K@{search\-Position\-I\-K}!ikfast_kinematics_plugin::IKFastKinematicsPlugin@{ikfast\-\_\-kinematics\-\_\-plugin\-::\-I\-K\-Fast\-Kinematics\-Plugin}}
+\subsubsection[{search\-Position\-I\-K}]{\setlength{\rightskip}{0pt plus 5cm}bool ikfast\-\_\-kinematics\-\_\-plugin\-::\-I\-K\-Fast\-Kinematics\-Plugin\-::search\-Position\-I\-K (
+\begin{DoxyParamCaption}
+\item[{const geometry\-\_\-msgs\-::\-Pose \&}]{ik\-\_\-pose, }
+\item[{const std\-::vector$<$ double $>$ \&}]{ik\-\_\-seed\-\_\-state, }
+\item[{double}]{timeout, }
+\item[{std\-::vector$<$ double $>$ \&}]{solution, }
+\item[{const I\-K\-Callback\-Fn \&}]{solution\-\_\-callback, }
+\item[{moveit\-\_\-msgs\-::\-Move\-It\-Error\-Codes \&}]{error\-\_\-code, }
+\item[{const kinematics\-::\-Kinematics\-Query\-Options \&}]{options = {\ttfamily kinematics\-:\-:KinematicsQueryOptions()}}
+\end{DoxyParamCaption}
+) const}\label{classikfast__kinematics__plugin_1_1_i_k_fast_kinematics_plugin_a680c1f7a537506d39ad4ccba9ea3996f}
+
+
+Given a desired pose of the end-\/effector, search for the joint angles required to reach it. This particular method is intended for \char`\"{}searching\char`\"{} for a solutions by stepping through the redundancy (or other numerical routines). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ik\-\_\-pose} & the desired pose of the link \\
+\hline
+{\em ik\-\_\-seed\-\_\-state} & an initial guess solution for the inverse kinematics \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if a valid solution was found, false otherwise 
+\end{DoxyReturn}
+\index{ikfast\-\_\-kinematics\-\_\-plugin\-::\-I\-K\-Fast\-Kinematics\-Plugin@{ikfast\-\_\-kinematics\-\_\-plugin\-::\-I\-K\-Fast\-Kinematics\-Plugin}!search\-Position\-I\-K@{search\-Position\-I\-K}}
+\index{search\-Position\-I\-K@{search\-Position\-I\-K}!ikfast_kinematics_plugin::IKFastKinematicsPlugin@{ikfast\-\_\-kinematics\-\_\-plugin\-::\-I\-K\-Fast\-Kinematics\-Plugin}}
+\subsubsection[{search\-Position\-I\-K}]{\setlength{\rightskip}{0pt plus 5cm}bool ikfast\-\_\-kinematics\-\_\-plugin\-::\-I\-K\-Fast\-Kinematics\-Plugin\-::search\-Position\-I\-K (
+\begin{DoxyParamCaption}
+\item[{const geometry\-\_\-msgs\-::\-Pose \&}]{ik\-\_\-pose, }
+\item[{const std\-::vector$<$ double $>$ \&}]{ik\-\_\-seed\-\_\-state, }
+\item[{double}]{timeout, }
+\item[{const std\-::vector$<$ double $>$ \&}]{consistency\-\_\-limits, }
+\item[{std\-::vector$<$ double $>$ \&}]{solution, }
+\item[{const I\-K\-Callback\-Fn \&}]{solution\-\_\-callback, }
+\item[{moveit\-\_\-msgs\-::\-Move\-It\-Error\-Codes \&}]{error\-\_\-code, }
+\item[{const kinematics\-::\-Kinematics\-Query\-Options \&}]{options = {\ttfamily kinematics\-:\-:KinematicsQueryOptions()}}
+\end{DoxyParamCaption}
+) const}\label{classikfast__kinematics__plugin_1_1_i_k_fast_kinematics_plugin_ae0424cfb0c8324f6a388a1e4568d9ccc}
+
+
+Given a desired pose of the end-\/effector, search for the joint angles required to reach it. This particular method is intended for \char`\"{}searching\char`\"{} for a solutions by stepping through the redundancy (or other numerical routines). The consistency\-\_\-limit specifies that only certain redundancy positions around those specified in the seed state are admissible and need to be searched. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ik\-\_\-pose} & the desired pose of the link \\
+\hline
+{\em ik\-\_\-seed\-\_\-state} & an initial guess solution for the inverse kinematics \\
+\hline
+{\em consistency\-\_\-limit} & the distance that the redundancy can be from the current position \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if a valid solution was found, false otherwise 
+\end{DoxyReturn}
+search\-\_\-mode is currently fixed during code generation \index{ikfast\-\_\-kinematics\-\_\-plugin\-::\-I\-K\-Fast\-Kinematics\-Plugin@{ikfast\-\_\-kinematics\-\_\-plugin\-::\-I\-K\-Fast\-Kinematics\-Plugin}!set\-Search\-Discretization@{set\-Search\-Discretization}}
+\index{set\-Search\-Discretization@{set\-Search\-Discretization}!ikfast_kinematics_plugin::IKFastKinematicsPlugin@{ikfast\-\_\-kinematics\-\_\-plugin\-::\-I\-K\-Fast\-Kinematics\-Plugin}}
+\subsubsection[{set\-Search\-Discretization}]{\setlength{\rightskip}{0pt plus 5cm}void ikfast\-\_\-kinematics\-\_\-plugin\-::\-I\-K\-Fast\-Kinematics\-Plugin\-::set\-Search\-Discretization (
+\begin{DoxyParamCaption}
+\item[{const std\-::map$<$ int, double $>$ \&}]{discretization}
+\end{DoxyParamCaption}
+)}\label{classikfast__kinematics__plugin_1_1_i_k_fast_kinematics_plugin_a1cd211c7c612e974b4762ed5a6d6416e}
+
+
+Sets the discretization value for the redundant joint. 
+
+Since this ikfast implementation allows for one redundant joint then only the first entry will be in the discretization map will be used. Calling this method replaces previous discretization settings.
+
+
+\begin{DoxyParams}{Parameters}
+{\em discretization} & a map of joint indices and discretization value pairs. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+src/cool400\-\_\-description\-\_\-arm\-\_\-ikfast\-\_\-moveit\-\_\-plugin.\-cpp\end{DoxyCompactItemize}

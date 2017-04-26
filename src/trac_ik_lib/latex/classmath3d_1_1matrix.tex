@@ -1,0 +1,98 @@
+\section{math3d\-:\-:matrix$<$ T $>$ Class Template Reference}
+\label{classmath3d_1_1matrix}\index{math3d\-::matrix$<$ T $>$@{math3d\-::matrix$<$ T $>$}}
+
+
+Inherits vector$<$ T $>$.
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef super\-::iterator {\bfseries iterator}\label{classmath3d_1_1matrix_a35a6c10b4922047e7965413bbe8f5dfb}
+
+\item 
+typedef super\-::const\-\_\-iterator {\bfseries const\-\_\-iterator}\label{classmath3d_1_1matrix_a7c01844815b6f9155f80ef80e8c1e122}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries matrix} (int w, int h)\label{classmath3d_1_1matrix_a485a360ddac670925cf35f59607aceec}
+
+\item 
+{\bfseries matrix} (int w, int h, const T \&v)\label{classmath3d_1_1matrix_a76c18cee63a4be66605d325885b98d0c}
+
+\item 
+{\bfseries matrix} (const {\bf matrix}$<$ T $>$ \&m)\label{classmath3d_1_1matrix_af21315b87d22fd38a97754fec9930804}
+
+\item 
+super\-::reference {\bfseries operator()} (size\-\_\-t r, size\-\_\-t c)\label{classmath3d_1_1matrix_a9dcb53e06bf4744013c6bebd33bbbd25}
+
+\item 
+super\-::const\-\_\-reference {\bfseries operator()} (size\-\_\-t r, size\-\_\-t c) const \label{classmath3d_1_1matrix_ac2c867b0b09b6712f05042b4050ce64e}
+
+\item 
+super\-::reference {\bfseries at} (const size\-\_\-t r, const size\-\_\-t c)\label{classmath3d_1_1matrix_a645364baf04f21c563b895fbcfee1434}
+
+\item 
+super\-::const\-\_\-reference {\bfseries at} (size\-\_\-t r, size\-\_\-t c) const \label{classmath3d_1_1matrix_a4a452f8a6edcfd40f458dd0b7e804f8c}
+
+\item 
+const T $\ast$ {\bfseries to\-\_\-ptr} () const \label{classmath3d_1_1matrix_a8f1486fcc0a67e129cea2371c24212d7}
+
+\item 
+T $\ast$ {\bfseries to\-\_\-ptr} ()\label{classmath3d_1_1matrix_abb550aad56b9509edb88193f3e4cb07c}
+
+\item 
+void {\bfseries resize} (int w, int h)\label{classmath3d_1_1matrix_ad96d503391e553b25fd16af6b2d42b69}
+
+\item 
+size\-\_\-t {\bfseries size} () const \label{classmath3d_1_1matrix_a7804f775d736cec4861f28ec2255fde7}
+
+\item 
+iterator {\bfseries begin} ()\label{classmath3d_1_1matrix_a77723a38cb4d3d3c72b17408baa9b47a}
+
+\item 
+const\-\_\-iterator {\bfseries begin} () const \label{classmath3d_1_1matrix_aa20581e4e4efc4295d15df554c97bb06}
+
+\item 
+iterator {\bfseries end} ()\label{classmath3d_1_1matrix_aabb29aaccf4c0b16e908f305b209b6f0}
+
+\item 
+const\-\_\-iterator {\bfseries end} () const \label{classmath3d_1_1matrix_a057711c247b5a18a2ffd91af551d828e}
+
+\item 
+bool {\bfseries operator==} (const {\bf matrix}$<$ T $>$ \&m) const \label{classmath3d_1_1matrix_a605f43dcbbef0ded4a428d73f0ed5215}
+
+\item 
+bool {\bfseries operator!=} (const {\bf matrix}$<$ T $>$ \&m) const \label{classmath3d_1_1matrix_a0a09de762f102c885c0617244816c44b}
+
+\item 
+{\bf matrix} \& {\bfseries operator=} (const {\bf matrix}$<$ T $>$ \&m)\label{classmath3d_1_1matrix_a8c7152a3e197c84727fa165ba27133c4}
+
+\item 
+{\footnotesize template$<$typename S $>$ }\\{\bf matrix}$<$ T $>$ \& {\bfseries operator$\ast$=} (const S \&s)\label{classmath3d_1_1matrix_a2df8ab5516ca15f6959bb570a7bd3403}
+
+\item 
+{\footnotesize template$<$typename S $>$ }\\{\bf matrix}$<$ T $>$ \& {\bfseries operator/=} (const S \&s)\label{classmath3d_1_1matrix_ad1e98ba8c12cf50a4dad71d7894a8e99}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const int \& {\bfseries width}\label{classmath3d_1_1matrix_a643b9be5bd5f1edb02a552e2c3bf072e}
+
+\item 
+const int \& {\bfseries height}\label{classmath3d_1_1matrix_a4fb52bc202653062c85f81f80ec8d390}
+
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+std\-::ostream \& {\bfseries operator$<$$<$} (std\-::ostream \&s, const {\bf matrix}$<$ T $>$ \&m)\label{classmath3d_1_1matrix_a9970d6bd4e9147f83a89f77c35fd8fc6}
+
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+include/trac\-\_\-ik/math3d.\-h\end{DoxyCompactItemize}

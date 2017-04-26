@@ -1,0 +1,310 @@
+\section{ikfast\-\_\-kinematics\-\_\-plugin\-:\-:I\-K\-Solver Class Reference}
+\label{classikfast__kinematics__plugin_1_1_i_k_solver}\index{ikfast\-\_\-kinematics\-\_\-plugin\-::\-I\-K\-Solver@{ikfast\-\_\-kinematics\-\_\-plugin\-::\-I\-K\-Solver}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool {\bfseries Compute\-Ik} (const Ik\-Real $\ast$eetrans, const Ik\-Real $\ast$eerot, const Ik\-Real $\ast$pfree, {\bf Ik\-Solution\-List\-Base}$<$ Ik\-Real $>$ \&solutions)\label{classikfast__kinematics__plugin_1_1_i_k_solver_adfa8e4462d99161fed9f3542ce2aac1a}
+
+\item 
+void {\bfseries innerfn} ({\bf Ik\-Solution\-List\-Base}$<$ Ik\-Real $>$ \&solutions)\label{classikfast__kinematics__plugin_1_1_i_k_solver_a5ec49815b0f9588c2688285b6127a453}
+
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void {\bfseries polyroots3} (Ik\-Real rawcoeffs[3+1], Ik\-Real rawroots[3], int \&numroots)\label{classikfast__kinematics__plugin_1_1_i_k_solver_acbe5bf64ae7e96ec2b44d46a109baaf2}
+
+\item 
+static void {\bfseries polyroots2} (Ik\-Real rawcoeffs[2+1], Ik\-Real rawroots[2], int \&numroots)\label{classikfast__kinematics__plugin_1_1_i_k_solver_a88a930443bcb0aed1238991ad72e169f}
+
+\item 
+static void {\bfseries polyroots5} (Ik\-Real rawcoeffs[5+1], Ik\-Real rawroots[5], int \&numroots)\label{classikfast__kinematics__plugin_1_1_i_k_solver_a2d9c8f61b76ef65490196dc9b08488be}
+
+\item 
+static void {\bfseries polyroots4} (Ik\-Real rawcoeffs[4+1], Ik\-Real rawroots[4], int \&numroots)\label{classikfast__kinematics__plugin_1_1_i_k_solver_a9e5a3a0c50ee64d7dff1278df1da44a0}
+
+\item 
+static void {\bfseries polyroots6} (Ik\-Real rawcoeffs[6+1], Ik\-Real rawroots[6], int \&numroots)\label{classikfast__kinematics__plugin_1_1_i_k_solver_a553decaadcb4fcd7615d40cb7b8a9ffe}
+
+\item 
+static bool {\bfseries checkconsistency8} (const Ik\-Real $\ast$Breal)\label{classikfast__kinematics__plugin_1_1_i_k_solver_a61960210d37fea7fbcd3168fb2f6f50d}
+
+\item 
+static void {\bf solvedialyticpoly8qep} (const Ik\-Real $\ast$matcoeffs, Ik\-Real $\ast$rawroots, int \&numroots)
+\begin{DoxyCompactList}\small\item\em Solve the det Ax$^\wedge$2+\-Bx+\-C = 0 problem using the Manocha and Canny method (1994) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Ik\-Real {\bfseries j0}\label{classikfast__kinematics__plugin_1_1_i_k_solver_a32e65ee50118982bb4de3bb9092a0f75}
+
+\item 
+Ik\-Real {\bfseries cj0}\label{classikfast__kinematics__plugin_1_1_i_k_solver_ad085b50315444c9757d30fa51a2d4eb8}
+
+\item 
+Ik\-Real {\bfseries sj0}\label{classikfast__kinematics__plugin_1_1_i_k_solver_a812607c49b7c7edeb1c358d84b1e4858}
+
+\item 
+Ik\-Real {\bfseries htj0}\label{classikfast__kinematics__plugin_1_1_i_k_solver_ab7b3b629a0a4417011e4adaeeb597186}
+
+\item 
+Ik\-Real {\bfseries j0mul}\label{classikfast__kinematics__plugin_1_1_i_k_solver_a31fd2b8a506769f89dde4e5ac9be2c47}
+
+\item 
+Ik\-Real {\bfseries j1}\label{classikfast__kinematics__plugin_1_1_i_k_solver_a54d9149923f4c894ed44a8d649973264}
+
+\item 
+Ik\-Real {\bfseries cj1}\label{classikfast__kinematics__plugin_1_1_i_k_solver_a130064712fbe6472935cf0360796575f}
+
+\item 
+Ik\-Real {\bfseries sj1}\label{classikfast__kinematics__plugin_1_1_i_k_solver_abdb51bfde20d27ef523c8e071ba8107c}
+
+\item 
+Ik\-Real {\bfseries htj1}\label{classikfast__kinematics__plugin_1_1_i_k_solver_a3b0b3dbb823d4be0a130600ed63b685d}
+
+\item 
+Ik\-Real {\bfseries j1mul}\label{classikfast__kinematics__plugin_1_1_i_k_solver_a65f7c6ae5396bf7fa3629e04dd6ff4dd}
+
+\item 
+Ik\-Real {\bfseries j2}\label{classikfast__kinematics__plugin_1_1_i_k_solver_a30ec42f1d98acc683b5b989ae196afeb}
+
+\item 
+Ik\-Real {\bfseries cj2}\label{classikfast__kinematics__plugin_1_1_i_k_solver_acb6ba4f1c860a56f1774bbc83697c9e9}
+
+\item 
+Ik\-Real {\bfseries sj2}\label{classikfast__kinematics__plugin_1_1_i_k_solver_af2654d8e61702f823d65f7cf40056ed3}
+
+\item 
+Ik\-Real {\bfseries htj2}\label{classikfast__kinematics__plugin_1_1_i_k_solver_adb179e2b079b15b9cd5c569bdb20d1c8}
+
+\item 
+Ik\-Real {\bfseries j2mul}\label{classikfast__kinematics__plugin_1_1_i_k_solver_ad7d1140447cffce8783e1e9487b7d69b}
+
+\item 
+Ik\-Real {\bfseries j3}\label{classikfast__kinematics__plugin_1_1_i_k_solver_a383d7ce82aec07bd0790e6bf2b0ee01e}
+
+\item 
+Ik\-Real {\bfseries cj3}\label{classikfast__kinematics__plugin_1_1_i_k_solver_a0b6e6bce5280ea3efa23e34db6166d6c}
+
+\item 
+Ik\-Real {\bfseries sj3}\label{classikfast__kinematics__plugin_1_1_i_k_solver_a90f7e522d705162827c3e7c4b9bf9cb6}
+
+\item 
+Ik\-Real {\bfseries htj3}\label{classikfast__kinematics__plugin_1_1_i_k_solver_ac5ccbf27a0b5329b83a8388fc7690d24}
+
+\item 
+Ik\-Real {\bfseries j3mul}\label{classikfast__kinematics__plugin_1_1_i_k_solver_a3fc520c548503fa006573350545d6a5d}
+
+\item 
+Ik\-Real {\bfseries j4}\label{classikfast__kinematics__plugin_1_1_i_k_solver_ab843eb2b9d7c51b176809a39db69166c}
+
+\item 
+Ik\-Real {\bfseries cj4}\label{classikfast__kinematics__plugin_1_1_i_k_solver_ac9bef6f9208d8b9f37b038a1841b6520}
+
+\item 
+Ik\-Real {\bfseries sj4}\label{classikfast__kinematics__plugin_1_1_i_k_solver_af74dfe1b5f879c578afc469b47ca5d68}
+
+\item 
+Ik\-Real {\bfseries htj4}\label{classikfast__kinematics__plugin_1_1_i_k_solver_a944536f09794a09628257fd46e0195e1}
+
+\item 
+Ik\-Real {\bfseries j4mul}\label{classikfast__kinematics__plugin_1_1_i_k_solver_ab959864fe4705e6af677d9b93b0ebeb4}
+
+\item 
+Ik\-Real {\bfseries j5}\label{classikfast__kinematics__plugin_1_1_i_k_solver_a7bd7689308d271a693b788ed2c75a376}
+
+\item 
+Ik\-Real {\bfseries cj5}\label{classikfast__kinematics__plugin_1_1_i_k_solver_a326bddf8fd054abc38ac96d44a36efac}
+
+\item 
+Ik\-Real {\bfseries sj5}\label{classikfast__kinematics__plugin_1_1_i_k_solver_a0d7c079e8ee4d7a5cf7efc3b6632c5f4}
+
+\item 
+Ik\-Real {\bfseries htj5}\label{classikfast__kinematics__plugin_1_1_i_k_solver_a63523fee000476c43116f7162aa69e07}
+
+\item 
+Ik\-Real {\bfseries j5mul}\label{classikfast__kinematics__plugin_1_1_i_k_solver_a3a811f781d965335c7004a0e96a0e7b4}
+
+\item 
+Ik\-Real {\bfseries new\-\_\-r00}\label{classikfast__kinematics__plugin_1_1_i_k_solver_a71bf5f2d25882a0bb82ab141a8f939a7}
+
+\item 
+Ik\-Real {\bfseries r00}\label{classikfast__kinematics__plugin_1_1_i_k_solver_aa59c90154e977319eba541dfbb06ec02}
+
+\item 
+Ik\-Real {\bfseries rxp0\-\_\-0}\label{classikfast__kinematics__plugin_1_1_i_k_solver_ab3f99868147210828ddeb93721afc884}
+
+\item 
+Ik\-Real {\bfseries new\-\_\-r01}\label{classikfast__kinematics__plugin_1_1_i_k_solver_a7c18aac1cb496196bcd31bd08a0bb326}
+
+\item 
+Ik\-Real {\bfseries r01}\label{classikfast__kinematics__plugin_1_1_i_k_solver_abac3275293cd2612f5e9b4eda4a6d7d1}
+
+\item 
+Ik\-Real {\bfseries rxp0\-\_\-1}\label{classikfast__kinematics__plugin_1_1_i_k_solver_ae627891cfbf88645a52c62d1946a76db}
+
+\item 
+Ik\-Real {\bfseries new\-\_\-r02}\label{classikfast__kinematics__plugin_1_1_i_k_solver_aec9a08b68895787c7f0c1e0b876df8e2}
+
+\item 
+Ik\-Real {\bfseries r02}\label{classikfast__kinematics__plugin_1_1_i_k_solver_a2fe90755e5d0f4ef102018a419743a13}
+
+\item 
+Ik\-Real {\bfseries rxp0\-\_\-2}\label{classikfast__kinematics__plugin_1_1_i_k_solver_abd76fffb9b25cb8e8f73cafc7c5f13c9}
+
+\item 
+Ik\-Real {\bfseries new\-\_\-r10}\label{classikfast__kinematics__plugin_1_1_i_k_solver_a1130973ab2a2a9bb5face0b4591e6f29}
+
+\item 
+Ik\-Real {\bfseries r10}\label{classikfast__kinematics__plugin_1_1_i_k_solver_ac048a13336e764e57ff9407700f79afa}
+
+\item 
+Ik\-Real {\bfseries rxp1\-\_\-0}\label{classikfast__kinematics__plugin_1_1_i_k_solver_a2e416bec179aee07a2fa0265c24ca794}
+
+\item 
+Ik\-Real {\bfseries new\-\_\-r11}\label{classikfast__kinematics__plugin_1_1_i_k_solver_a14d80bae903f9ff4c3d3436bc685806f}
+
+\item 
+Ik\-Real {\bfseries r11}\label{classikfast__kinematics__plugin_1_1_i_k_solver_a3d81afc4a37a528cca92be7bd9378406}
+
+\item 
+Ik\-Real {\bfseries rxp1\-\_\-1}\label{classikfast__kinematics__plugin_1_1_i_k_solver_a443d48383e9c57d8cf1ba77be36bdc8b}
+
+\item 
+Ik\-Real {\bfseries new\-\_\-r12}\label{classikfast__kinematics__plugin_1_1_i_k_solver_abdfc7e91e4d5a86eadd7f94982b7d82a}
+
+\item 
+Ik\-Real {\bfseries r12}\label{classikfast__kinematics__plugin_1_1_i_k_solver_a54dc550ef1167646b506ece41fde37f6}
+
+\item 
+Ik\-Real {\bfseries rxp1\-\_\-2}\label{classikfast__kinematics__plugin_1_1_i_k_solver_a82c61a6f8bb010205f9ba4812a210dfb}
+
+\item 
+Ik\-Real {\bfseries new\-\_\-r20}\label{classikfast__kinematics__plugin_1_1_i_k_solver_abaf6d7cf59b31c937fe11a306b7621a2}
+
+\item 
+Ik\-Real {\bfseries r20}\label{classikfast__kinematics__plugin_1_1_i_k_solver_af03c73f1da221415387cbbb056ddb5a0}
+
+\item 
+Ik\-Real {\bfseries rxp2\-\_\-0}\label{classikfast__kinematics__plugin_1_1_i_k_solver_a9effb35376794883836a0e46a65a24cf}
+
+\item 
+Ik\-Real {\bfseries new\-\_\-r21}\label{classikfast__kinematics__plugin_1_1_i_k_solver_a773db10c66f90a5cf64690d2cf0497e2}
+
+\item 
+Ik\-Real {\bfseries r21}\label{classikfast__kinematics__plugin_1_1_i_k_solver_a0e064ed0ec61ce37b19b1a023328d5e4}
+
+\item 
+Ik\-Real {\bfseries rxp2\-\_\-1}\label{classikfast__kinematics__plugin_1_1_i_k_solver_a6a3182dd394758936d94605eda1fc6ac}
+
+\item 
+Ik\-Real {\bfseries new\-\_\-r22}\label{classikfast__kinematics__plugin_1_1_i_k_solver_a7cf3672d570ee82347f13ab527315a38}
+
+\item 
+Ik\-Real {\bfseries r22}\label{classikfast__kinematics__plugin_1_1_i_k_solver_a87fa09d618fed5705c072e40ccca614c}
+
+\item 
+Ik\-Real {\bfseries rxp2\-\_\-2}\label{classikfast__kinematics__plugin_1_1_i_k_solver_a6f8084e5c66835c5e31796a884b84558}
+
+\item 
+Ik\-Real {\bfseries new\-\_\-px}\label{classikfast__kinematics__plugin_1_1_i_k_solver_af082061b2d46f50fd980baaaa9cab973}
+
+\item 
+Ik\-Real {\bfseries px}\label{classikfast__kinematics__plugin_1_1_i_k_solver_af8b184c501ab64068cd46e1a4ac75bc5}
+
+\item 
+Ik\-Real {\bfseries npx}\label{classikfast__kinematics__plugin_1_1_i_k_solver_a3bc941d962265b91eea9cd7064c0e1f2}
+
+\item 
+Ik\-Real {\bfseries new\-\_\-py}\label{classikfast__kinematics__plugin_1_1_i_k_solver_a80d24e3b2d7e9dc294dab8cc233c42ce}
+
+\item 
+Ik\-Real {\bfseries py}\label{classikfast__kinematics__plugin_1_1_i_k_solver_af92b65529d6e47d85e32ec4d759f6519}
+
+\item 
+Ik\-Real {\bfseries npy}\label{classikfast__kinematics__plugin_1_1_i_k_solver_af77631ff197e2720f420d397cf329bf4}
+
+\item 
+Ik\-Real {\bfseries new\-\_\-pz}\label{classikfast__kinematics__plugin_1_1_i_k_solver_aa8b9d91f49af59885786e1ad890e8af2}
+
+\item 
+Ik\-Real {\bfseries pz}\label{classikfast__kinematics__plugin_1_1_i_k_solver_a89c5c43dcd8d9da97180666f22785423}
+
+\item 
+Ik\-Real {\bfseries npz}\label{classikfast__kinematics__plugin_1_1_i_k_solver_a788e5a2b6e22261c3c27f97576e24744}
+
+\item 
+Ik\-Real {\bfseries pp}\label{classikfast__kinematics__plugin_1_1_i_k_solver_a73afdf089c0a74854a99be3327ba52aa}
+
+\item 
+unsigned char {\bfseries \-\_\-ij0} [2]\label{classikfast__kinematics__plugin_1_1_i_k_solver_acf50894053a1fbaa3aa81b479d3fe8f6}
+
+\item 
+unsigned char {\bfseries \-\_\-nj0}\label{classikfast__kinematics__plugin_1_1_i_k_solver_ab689683c37f4fb85e4bbdfea2181ed05}
+
+\item 
+unsigned char {\bfseries \-\_\-ij1} [2]\label{classikfast__kinematics__plugin_1_1_i_k_solver_ae5983fc79edaeb48c4cd6e361c1c9535}
+
+\item 
+unsigned char {\bfseries \-\_\-nj1}\label{classikfast__kinematics__plugin_1_1_i_k_solver_a57ba4e973b3ebc7f6b58cc08fa9c21bb}
+
+\item 
+unsigned char {\bfseries \-\_\-ij2} [2]\label{classikfast__kinematics__plugin_1_1_i_k_solver_ad4d154f72d89248afce385fb4757d1e1}
+
+\item 
+unsigned char {\bfseries \-\_\-nj2}\label{classikfast__kinematics__plugin_1_1_i_k_solver_a053f7bce782662021d21ac4221acc1d2}
+
+\item 
+unsigned char {\bfseries \-\_\-ij3} [2]\label{classikfast__kinematics__plugin_1_1_i_k_solver_aba118cd58760c01a548b39ccbf229d14}
+
+\item 
+unsigned char {\bfseries \-\_\-nj3}\label{classikfast__kinematics__plugin_1_1_i_k_solver_a09ed9220ea24609fd19fd6f3cc8a3a75}
+
+\item 
+unsigned char {\bfseries \-\_\-ij4} [2]\label{classikfast__kinematics__plugin_1_1_i_k_solver_a58064f86bd3641174c26472df8982a28}
+
+\item 
+unsigned char {\bfseries \-\_\-nj4}\label{classikfast__kinematics__plugin_1_1_i_k_solver_ab5722be41315203b47bfc34bdaceadf5}
+
+\item 
+unsigned char {\bfseries \-\_\-ij5} [2]\label{classikfast__kinematics__plugin_1_1_i_k_solver_a9ab37056a25c0fe3509b8bcf373149c8}
+
+\item 
+unsigned char {\bfseries \-\_\-nj5}\label{classikfast__kinematics__plugin_1_1_i_k_solver_a7ce494d4651e1a7b96d15293b8de344d}
+
+\item 
+Ik\-Real {\bfseries j100}\label{classikfast__kinematics__plugin_1_1_i_k_solver_a79bc119b996a2a0eec806bfaa1755b72}
+
+\item 
+Ik\-Real {\bfseries cj100}\label{classikfast__kinematics__plugin_1_1_i_k_solver_aba371b30bdefc6ca9415cc7d110151c5}
+
+\item 
+Ik\-Real {\bfseries sj100}\label{classikfast__kinematics__plugin_1_1_i_k_solver_a412dda760fadd9927442cac4d6ac912a}
+
+\item 
+unsigned char {\bfseries \-\_\-ij100} [2]\label{classikfast__kinematics__plugin_1_1_i_k_solver_af4778da9fbffcc1808ef7b4ce3b20cd5}
+
+\item 
+unsigned char {\bfseries \-\_\-nj100}\label{classikfast__kinematics__plugin_1_1_i_k_solver_a1501e86c52d4857c1296bf60a2eea00a}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\index{ikfast\-\_\-kinematics\-\_\-plugin\-::\-I\-K\-Solver@{ikfast\-\_\-kinematics\-\_\-plugin\-::\-I\-K\-Solver}!solvedialyticpoly8qep@{solvedialyticpoly8qep}}
+\index{solvedialyticpoly8qep@{solvedialyticpoly8qep}!ikfast_kinematics_plugin::IKSolver@{ikfast\-\_\-kinematics\-\_\-plugin\-::\-I\-K\-Solver}}
+\subsubsection[{solvedialyticpoly8qep}]{\setlength{\rightskip}{0pt plus 5cm}static void ikfast\-\_\-kinematics\-\_\-plugin\-::\-I\-K\-Solver\-::solvedialyticpoly8qep (
+\begin{DoxyParamCaption}
+\item[{const Ik\-Real $\ast$}]{matcoeffs, }
+\item[{Ik\-Real $\ast$}]{rawroots, }
+\item[{int \&}]{numroots}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\label{classikfast__kinematics__plugin_1_1_i_k_solver_a7c1e32995724d51835a99a83bf2e3917}
+
+
+Solve the det Ax$^\wedge$2+\-Bx+\-C = 0 problem using the Manocha and Canny method (1994) 
+
+matcoeffs is of length 54$\ast$3, for 3 matrices 
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+src/cool400\-\_\-description\-\_\-arm\-\_\-ikfast\-\_\-moveit\-\_\-plugin.\-cpp\end{DoxyCompactItemize}

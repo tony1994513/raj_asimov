@@ -1,0 +1,58 @@
+\section{dual\-\_\-quaternion Struct Reference}
+\label{structdual__quaternion}\index{dual\-\_\-quaternion@{dual\-\_\-quaternion}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries dual\-\_\-quaternion} (double v=1.\-0)\label{structdual__quaternion_ac62c1be24e57fa9eaf9242edea0371f2}
+
+\item 
+{\bf dual\-\_\-quaternion} \& {\bfseries normalize} ()\label{structdual__quaternion_a768afa2d1144c79a3a7bcf17b8cbc859}
+
+\item 
+point3d {\bfseries get\-\_\-translation} ()\label{structdual__quaternion_ace1f35fd21a5b4b557edf729bd984c4f}
+
+\item 
+void {\bfseries to\-\_\-vector} (double $\ast$p)\label{structdual__quaternion_a5cae9b20969ab83acabed710320076f4}
+
+\item 
+{\bf dual\-\_\-quaternion} \& {\bfseries operator+=} (const {\bf dual\-\_\-quaternion} \&a)\label{structdual__quaternion_a549dc195cf2516efe1b68ab5384eb027}
+
+\item 
+{\bf dual\-\_\-quaternion} \& {\bfseries operator$\ast$=} (double a)\label{structdual__quaternion_a607d62d4c6f9baa87d3d851c5378b70d}
+
+\item 
+{\bf dual\-\_\-quaternion} \& {\bfseries log} ()\label{structdual__quaternion_a482799a3bd78cb3b073563bcbac0d670}
+
+\item 
+{\bf dual\-\_\-quaternion} \& {\bfseries exp} ()\label{structdual__quaternion_a83780cfafc1150b5d30fa67b089a156f}
+
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static {\bf dual\-\_\-quaternion} {\bfseries rigid\-\_\-transformation} (const {\bf quaternion}$<$ double $>$ \&r, const point3d \&t)\label{structdual__quaternion_a5fba0f36b01709546950a47749d40eb6}
+
+\item 
+static {\bf dual\-\_\-quaternion} {\bfseries convert} (const double $\ast$p)\label{structdual__quaternion_aa12a1862743d459a08864924972a4139}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+{\bf quaternion}$<$ double $>$ {\bfseries R}\label{structdual__quaternion_ad1d98ac3a9cdf7f4185195b164de6660}
+
+\item 
+{\bf quaternion}$<$ double $>$ {\bfseries t\-R\-\_\-2}\label{structdual__quaternion_a2a67ab7931cf6f02759e530198686ca9}
+
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr double {\bfseries dq\-\_\-epsilon} = 1e-\/8\label{structdual__quaternion_ae41ad8c90f3663ca2d119e6c42060a3d}
+
+\end{DoxyCompactItemize}
+
+
+The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+include/trac\-\_\-ik/dual\-\_\-quaternion.\-h\end{DoxyCompactItemize}

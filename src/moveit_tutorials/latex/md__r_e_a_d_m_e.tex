@@ -1,0 +1,25 @@
+This repo is automatically built by the R\-O\-S build farm and its output is hosted here\-: {\tt http\-://docs.\-ros.\-org/indigo/api/moveit\-\_\-tutorials/html/}
+
+\subsection*{Travis Continuous Integration}
+
+{\tt ![Build Status](https\-://travis-\/ci.\-org/ros-\/planning/moveit\-\_\-tutorials.\-svg?branch=master)}
+
+\subsection*{R\-O\-S Buildfarm}
+
+{\tt ![Build Status](http\-://build.\-ros.\-org/build\-Status/icon?job=\-Idoc\-\_\-\-\_\-moveit\-\_\-tutorials\-\_\-\-\_\-ubuntu\-\_\-trusty\-\_\-amd64\&build=2)}
+
+\subsection*{Build}
+
+If you want to test the tutorials by generating the html pages locally on your machine, install {\tt rosdoc\-\_\-lite}\-: \begin{DoxyVerb}sudo apt-get install ros-kinetic-rosdoc-lite
+\end{DoxyVerb}
+
+
+and run in the root of the package\-: \begin{DoxyVerb}rosdoc_lite -o build .
+\end{DoxyVerb}
+
+
+Then open {\ttfamily L\-O\-C\-A\-L\-\_\-\-P\-A\-C\-K\-A\-G\-E\-\_\-\-P\-A\-T\-H/build/html/index.\-html} in your web browser.
+
+\subsection*{Deployment}
+
+For deploying documentation changes to the web, {\tt Section 3 of rosdoc\-\_\-lite wiki} says that \char`\"{}rosdoc\-\_\-lite is automatically run for packages in repositories that have rosinstall files listed in the rosdistro repository.\char`\"{} This is done about once every 24 hours, {\tt overnight}. 

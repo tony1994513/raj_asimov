@@ -1,0 +1,107 @@
+\section{Interactive\-Robot Class Reference}
+\label{class_interactive_robot}\index{Interactive\-Robot@{Interactive\-Robot}}
+
+
+{\ttfamily \#include $<$interactive\-\_\-robot.\-h$>$}
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class {\bf Robot\-Load\-Exception}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Interactive\-Robot} (const std\-::string \&robot\-\_\-description=\char`\"{}robot\-\_\-description\char`\"{}, const std\-::string \&robot\-\_\-topic=\char`\"{}interactive\-\_\-robot\-\_\-state\char`\"{}, const std\-::string \&marker\-\_\-topic=\char`\"{}interactive\-\_\-robot\-\_\-markers\char`\"{}, const std\-::string \&imarker\-\_\-topic=\char`\"{}interactive\-\_\-robot\-\_\-imarkers\char`\"{})\label{class_interactive_robot_a254415c7db3c5dd9c24a6276db0e58bb}
+
+\item 
+void {\bf set\-Group} (const std\-::string \&name)
+\item 
+const std\-::string \& {\bfseries get\-Group\-Name} () const \label{class_interactive_robot_ab13565c1f2748d87406f6d9384543561}
+
+\item 
+bool {\bf set\-Group\-Pose} (const Eigen\-::\-Affine3d \&pose)
+\item 
+void {\bf set\-World\-Object\-Pose} (const Eigen\-::\-Affine3d \&pose)
+\item 
+void {\bf set\-User\-Callback} (boost\-::function$<$ void({\bf Interactive\-Robot} \&robot)$>$ callback)
+\item 
+robot\-\_\-model\-::\-Robot\-Model\-Ptr \& {\bf robot\-Model} ()
+\item 
+robot\-\_\-state\-::\-Robot\-State\-Ptr \& {\bf robot\-State} ()
+\item 
+void {\bf get\-World\-Geometry} (Eigen\-::\-Affine3d \&pose, double \&size)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+void $\ast$ {\bf user\-\_\-data\-\_\-}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Keeps track of the state of the robot and the world. Updates the state when interactive markers are manipulated. Publishes the state to rviz. 
+
+\subsection{Member Function Documentation}
+\index{Interactive\-Robot@{Interactive\-Robot}!get\-World\-Geometry@{get\-World\-Geometry}}
+\index{get\-World\-Geometry@{get\-World\-Geometry}!InteractiveRobot@{Interactive\-Robot}}
+\subsubsection[{get\-World\-Geometry}]{\setlength{\rightskip}{0pt plus 5cm}void Interactive\-Robot\-::get\-World\-Geometry (
+\begin{DoxyParamCaption}
+\item[{Eigen\-::\-Affine3d \&}]{pose, }
+\item[{double \&}]{size}
+\end{DoxyParamCaption}
+)}\label{class_interactive_robot_a35a2c334020cd9de6251d832373f68f5}
+return size and pose of world object cube \index{Interactive\-Robot@{Interactive\-Robot}!robot\-Model@{robot\-Model}}
+\index{robot\-Model@{robot\-Model}!InteractiveRobot@{Interactive\-Robot}}
+\subsubsection[{robot\-Model}]{\setlength{\rightskip}{0pt plus 5cm}robot\-\_\-model\-::\-Robot\-Model\-Ptr\& Interactive\-Robot\-::robot\-Model (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_interactive_robot_a3963facbf156a18cb375d6bae61fc1c1}
+access Robot\-Model \index{Interactive\-Robot@{Interactive\-Robot}!robot\-State@{robot\-State}}
+\index{robot\-State@{robot\-State}!InteractiveRobot@{Interactive\-Robot}}
+\subsubsection[{robot\-State}]{\setlength{\rightskip}{0pt plus 5cm}robot\-\_\-state\-::\-Robot\-State\-Ptr\& Interactive\-Robot\-::robot\-State (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_interactive_robot_a92391ca9abc9a1dbd3d081f96e59713e}
+access Robot\-State \index{Interactive\-Robot@{Interactive\-Robot}!set\-Group@{set\-Group}}
+\index{set\-Group@{set\-Group}!InteractiveRobot@{Interactive\-Robot}}
+\subsubsection[{set\-Group}]{\setlength{\rightskip}{0pt plus 5cm}void Interactive\-Robot\-::set\-Group (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{name}
+\end{DoxyParamCaption}
+)}\label{class_interactive_robot_ac5818bffd09b54ff57235551d707cc9c}
+set which group to manipulate \index{Interactive\-Robot@{Interactive\-Robot}!set\-Group\-Pose@{set\-Group\-Pose}}
+\index{set\-Group\-Pose@{set\-Group\-Pose}!InteractiveRobot@{Interactive\-Robot}}
+\subsubsection[{set\-Group\-Pose}]{\setlength{\rightskip}{0pt plus 5cm}bool Interactive\-Robot\-::set\-Group\-Pose (
+\begin{DoxyParamCaption}
+\item[{const Eigen\-::\-Affine3d \&}]{pose}
+\end{DoxyParamCaption}
+)}\label{class_interactive_robot_af518e4fa978692640faa7fa57c6b1bb3}
+Set the pose of the group we are manipulating \index{Interactive\-Robot@{Interactive\-Robot}!set\-User\-Callback@{set\-User\-Callback}}
+\index{set\-User\-Callback@{set\-User\-Callback}!InteractiveRobot@{Interactive\-Robot}}
+\subsubsection[{set\-User\-Callback}]{\setlength{\rightskip}{0pt plus 5cm}void Interactive\-Robot\-::set\-User\-Callback (
+\begin{DoxyParamCaption}
+\item[{boost\-::function$<$ void({\bf Interactive\-Robot} \&robot)$>$}]{callback}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_interactive_robot_a993bf38903cd72e7f43fe9f8994c8ea5}
+set a callback to call when updates occur \index{Interactive\-Robot@{Interactive\-Robot}!set\-World\-Object\-Pose@{set\-World\-Object\-Pose}}
+\index{set\-World\-Object\-Pose@{set\-World\-Object\-Pose}!InteractiveRobot@{Interactive\-Robot}}
+\subsubsection[{set\-World\-Object\-Pose}]{\setlength{\rightskip}{0pt plus 5cm}void Interactive\-Robot\-::set\-World\-Object\-Pose (
+\begin{DoxyParamCaption}
+\item[{const Eigen\-::\-Affine3d \&}]{pose}
+\end{DoxyParamCaption}
+)}\label{class_interactive_robot_a70f5f09e441d4e2c1e9d66d62f567106}
+set pose of the world object 
+
+\subsection{Member Data Documentation}
+\index{Interactive\-Robot@{Interactive\-Robot}!user\-\_\-data\-\_\-@{user\-\_\-data\-\_\-}}
+\index{user\-\_\-data\-\_\-@{user\-\_\-data\-\_\-}!InteractiveRobot@{Interactive\-Robot}}
+\subsubsection[{user\-\_\-data\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ Interactive\-Robot\-::user\-\_\-data\-\_\-}\label{class_interactive_robot_a338cd4da22e1f785efbd3d7c01489e35}
+hook for user data. Unused by the \doxyref{Interactive\-Robot}{p.}{class_interactive_robot} class. initialized to 0 
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+doc/pr2\-\_\-tutorials/interactivity/src/interactive\-\_\-robot.\-h\item 
+doc/pr2\-\_\-tutorials/interactivity/src/interactive\-\_\-robot.\-cpp\end{DoxyCompactItemize}

@@ -1,0 +1,37 @@
+The T\-R\-A\-C-\/\-I\-K kinematics solver is built in trac\-\_\-ik\-\_\-lib as a .so library (this has been tested using R\-O\-S Indigo using Catkin). The headers and shared objects in this package can be linked against by user programs.
+
+\subsubsection*{As of v1.\-4.\-3, this package is part of the R\-O\-S Indigo/\-Jade binaries\-: {\ttfamily sudo apt-\/get install ros-\/jade-\/trac-\/ik}}
+
+This requires the Ubuntu packages for N\-L\-Opt Libraries to be installed (the ros-\/indigo-\/nlopt packages do not use proper headers). This can be done by running {\ttfamily sudo apt-\/get install libnlopt-\/dev} on the trusty (and later) standard Ubuntu distros. Alternatively, you can run {\ttfamily rosdep update \&\& rosdep install trac\-\_\-ik\-\_\-lib}.
+
+K\-D\-L I\-K\-:
+
+```c++ K\-D\-L\-::\-Chain\-Fk\-Solver\-Pos\-\_\-recursive fk\-\_\-solver(chain); K\-D\-L\-::\-Chain\-Ik\-Solver\-Vel\-\_\-pinv vik\-\_\-solver(chain); K\-D\-L\-::\-Chain\-Jnt\-To\-Jac\-Solver jac\-\_\-solver(chain);
+
+K\-D\-L\-::\-Chain\-Ik\-Solver\-Pos\-\_\-\-N\-R\-\_\-\-J\-L ik\-\_\-solver(\-K\-D\-L\-::\-Chain chain, K\-D\-L\-::\-Jnt\-Array lower\-\_\-joint\-\_\-limits, K\-D\-L\-::\-Jnt\-Array upper\-\_\-joint\-\_\-limits, fk\-\_\-solver, vik\-\_\-solver, int num\-\_\-iterations, double error);
+
+int rc = ik\-\_\-solver.\-Cart\-To\-Jnt(\-K\-D\-L\-::\-Jnt\-Array joint\-\_\-seed, K\-D\-L\-::\-Frame desired\-\_\-end\-\_\-effector\-\_\-pose, K\-D\-L\-::\-Jnt\-Array\& return\-\_\-joints);
+
+\% N\-O\-T\-E\-: Cart\-To\-Jnt succeeded if rc $>$=0
+
+\% N\-O\-T\-E\-: to use a timeout in seconds (e.\-g., 0.\-005), the iterations can be set to 1, and this can be called in a loop with your own timer.
+
+\% N\-O\-T\-E\-: error == 1e-\/5 is acceptable for most purposes ```
+
+T\-R\-A\-C-\/\-I\-K\-:
+
+```c++ \#include $<$\doxyref{trac\-\_\-ik/trac\-\_\-ik.\-hpp}{p.}{trac__ik_8hpp_source}$>$
+
+\doxyref{T\-R\-A\-C\-\_\-\-I\-K\-::\-T\-R\-A\-C\-\_\-\-I\-K}{p.}{class_t_r_a_c___i_k_1_1_t_r_a_c___i_k} ik\-\_\-solver(K\-D\-L\-::\-Chain chain, K\-D\-L\-::\-Jnt\-Array lower\-\_\-joint\-\_\-limits, K\-D\-L\-::\-Jnt\-Array upper\-\_\-joint\-\_\-limits, double timeout\-\_\-in\-\_\-secs=0.\-005, double error=1e-\/5, T\-R\-A\-C\-\_\-\-I\-K\-::\-Solve\-Type type=T\-R\-A\-C\-\_\-\-I\-K\-::\-Speed);
+
+\% O\-R
+
+\doxyref{T\-R\-A\-C\-\_\-\-I\-K\-::\-T\-R\-A\-C\-\_\-\-I\-K}{p.}{class_t_r_a_c___i_k_1_1_t_r_a_c___i_k} ik\-\_\-solver(string base\-\_\-link, string tip\-\_\-link, string U\-R\-D\-F\-\_\-param=\char`\"{}/robot\-\_\-description\char`\"{}, double timeout\-\_\-in\-\_\-secs=0.\-005, double error=1e-\/5, T\-R\-A\-C\-\_\-\-I\-K\-::\-Solve\-Type type=T\-R\-A\-C\-\_\-\-I\-K\-::\-Speed);
+
+\% N\-O\-T\-E\-: The last arguments to the constructors are optional. \% The type can be one of the following\-: \% Speed\-: returns very quickly the first solution found \% Distance\-: runs for the full timeout\-\_\-in\-\_\-secs, then returns the solution that minimizes S\-S\-E from the seed \% Manip1\-: runs for full timeout, returns solution that maximizes sqrt(det(\-J$\ast$\-J$^\wedge$\-T)) \% Manip2\-: runs for full timeout, returns solution that minimizes cond(\-J) = $\vert$\-J$\vert$$\ast$$\vert$\-J$^\wedge$-\/1$\vert$
+
+int rc = ik\-\_\-solver.\-Cart\-To\-Jnt(\-K\-D\-L\-::\-Jnt\-Array joint\-\_\-seed, K\-D\-L\-::\-Frame desired\-\_\-end\-\_\-effector\-\_\-pose, K\-D\-L\-::\-Jnt\-Array\& return\-\_\-joints, K\-D\-L\-::\-Twist tolerances);
+
+\% N\-O\-T\-E\-: Cart\-To\-Jnt succeeded if rc $>$=0
+
+\% N\-O\-T\-E\-: tolerances on the end effector pose are optional, and if not \% provided, then by default are 0. If given, the A\-B\-S() of the \% values will be used to set tolerances at -\/tol..0..+tol for each of \% the 6 Cartesian dimensions of the end effector pose. ``` 
