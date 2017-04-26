@@ -1,4 +1,4 @@
 # raj_asimov
 Contains answers to asimov questionnare
 
-The codes are present inside the src/ directory.
+The code is present inside the src/ directory.
